@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Ingoude_logo from "@/assets/Ingoude_logo.png"
 
 const Navigation = () => {
   return (
@@ -6,23 +7,23 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold tracking-tight">Deptico</h1>
+            <img src={Ingoude_logo} alt="" className="w-auto h-12" />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
+            <a href="/" className="text-md font-roboto hover:text-accent transition-colors">
               Home
             </a>
-            <a href="#features" className="text-sm font-medium hover:text-accent transition-colors">
+            <a href="#features" className="text-md font-roboto hover:text-accent transition-colors">
               Features
             </a>
-            <a href="#faq" className="text-sm font-medium hover:text-accent transition-colors">
+            <a href="#faq" className="text-md font-roboto hover:text-accent transition-colors">
               FAQ
             </a>
-            <a href="/courses" className="text-sm font-medium hover:text-accent transition-colors">
+            <a href="/courses" className="text-md font-roboto hover:text-accent transition-colors">
               Courses
             </a>
-            <a href="#about" className="text-sm font-medium hover:text-accent transition-colors">
+            <a href="#about" className="text-md font-roboto hover:text-accent transition-colors">
               About
             </a>
           </div>
