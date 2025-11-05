@@ -2,28 +2,33 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const navigate = useNavigate();
 
   const courses = [
     {
       title: "Vocabulary",
-      duration: "210 Days",
+      duration: "22 Days",
       price: "Free",
-      image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=80",
+      image:
+        "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=80",
     },
     {
       title: "Conversation Skills",
       duration: "210 Days",
       price: "Free",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+      image:
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
     },
     {
       title: "English for Business",
       duration: "210 Days",
       price: "Free",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+      image:
+        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
     },
   ];
 
@@ -61,7 +66,17 @@ const Courses = () => {
                   <p className="text-muted-foreground">{course.duration}</p>
                   <div className="h-px bg-border my-4" />
                   <p className="font-semibold">{course.price}</p>
-                  <Button variant="default" size="lg" className="w-full">
+
+                  <Button
+                    variant="default"
+                    size="lg"
+                    className="w-full"
+                    onClick={() =>
+                      navigate(`/course/${course.title.toLowerCase().replace(/\s+/g, "-")}`, {
+                        state: course,
+                      })
+                    }
+                  >
                     View Details
                   </Button>
                 </div>
