@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import Ingoude_logo from "@/assets/Ingoude_logo.png"
+import {  useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+
+  const navigate = useNavigate()
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img src={Ingoude_logo} alt="" className="w-auto h-12" />
+                <img onClick={() => navigate("/") } src={Ingoude_logo} alt="" className="w-auto h-12 cursor-pointer" />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">

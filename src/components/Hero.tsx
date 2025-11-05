@@ -3,6 +3,7 @@ import { GraduationCap, Briefcase, School, MessageSquare, BookOpen, PenTool } fr
 import heroImage from "@/assets/hero-instructor.jpg";
 
 const Hero = () => {
+  
   return (
     <section className="relative bg-gradient-to-br from-[#efefef] via-[#ced9f9] to-[#efefef] pt-28 pb-24 px-6 lg:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -10,7 +11,7 @@ const Hero = () => {
         <div className="space-y-10">
           {/* Top Categories */}
           <div className="flex flex-wrap gap-3">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#E9E6FF] hover:bg-[#E0DCFF] transition-colors cursor-pointer">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#e3dfff] hover:bg-[#E0DCFF] transition-colors cursor-pointer">
               <GraduationCap className="w-4 h-4 text-[#5E4EE3]" />
               <span className="text-sm font-medium text-[#4C3DBA]">Kids</span>
             </div>

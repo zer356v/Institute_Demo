@@ -6,6 +6,7 @@ import BestFeatures from "@/components/BestFeatures";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import ScheduleDemo from "@/components/ScheduleDemo";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <TrustedBy />
         <OnlineLearning />
         <BestFeatures />
+        <ScheduleDemo/>
         <Testimonials />
         <FAQ />
       </main>
