@@ -38,18 +38,18 @@ const Courses = () => {
       <main className="pt-32 pb-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-4">Online Courses</h1>
+            <h1 className="text-4xl lg:text-5xl text-gray-600 font-serif mb-4">Online Courses</h1>
           </div>
 
           <div className="mb-12">
-            <h2 className="text-3xl font-bold mb-8">Programs</h2>
+            <h2 className="text-3xl text-gray-600 font-serif ">Programs</h2>
           </div>
 
           <div ref={ref} className="grid md:grid-cols-3 gap-8">
             {courses.map((course, index) => (
               <div
                 key={index}
-                className={`bg-background rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 ${
+                className={`bg-background overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -62,10 +62,10 @@ const Courses = () => {
                   />
                 </div>
                 <div className="p-6 space-y-4">
-                  <h3 className="text-2xl font-bold">{course.title}</h3>
-                  <p className="text-muted-foreground">{course.duration}</p>
+                  <h3 className="text-xl font-serif">{course.title}</h3>
+                  <p className="text-muted-foreground text-sm">{course.duration}</p>
                   <div className="h-px bg-border my-4" />
-                  <p className="font-semibold">{course.price}</p>
+                  <p className="font-serif">{course.price}</p>
 
                   <Button
                     variant="default"
